@@ -638,7 +638,7 @@ class Group
   end
 
   def set_shapado_version
-    self.shapado_version_id = ShapadoVersion.where(:token => 'free').first.id
+    self.shapado_version_id = ShapadoVersion.where(:token => 'free').first.try(:id)
   end
 
 end

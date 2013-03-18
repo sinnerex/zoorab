@@ -199,7 +199,7 @@ namespace :setup do
 
   desc "Create/Update Versions"
   task :versions => [:environment] do
-    ShapadoVersion.reload! if ShapadoVersion.count == 0
+    ShapadoVersion.reload!
   end
 
   task :index_tags => [:environment] do
